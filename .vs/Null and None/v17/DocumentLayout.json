@@ -27,9 +27,10 @@
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
               "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
-              "ViewState": "AQIAAHICAAAAAAAAAAAhwIUCAAAAAAAA",
+              "ViewState": "AQIAABgEAAAAAAAAAAAhwCsEAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-18T08:22:22.796Z"
+              "WhenOpened": "2024-10-18T08:22:22.796Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -39,7 +40,7 @@
               "RelativeDocumentMoniker": "Null and None\\Null and None.c",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\\u0426\u041F\u0422\\Null and None\\Null and None\\Null and None.c",
               "RelativeToolTip": "Null and None\\Null and None.c",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFYAAACnAAAA",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAcwJwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-10-18T08:05:09.956Z",
               "EditorCaption": ""

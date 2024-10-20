@@ -1,6 +1,6 @@
 ﻿  Null and None.c
 C:\Users\Admin\Desktop\ЦПТ\Null and None\Null and None\Null and None.c(19,5): warning C4047: return: "char" отличается по уровням косвенного обращения от "char (*)[4]"
 C:\Users\Admin\Desktop\ЦПТ\Null and None\Null and None\Null and None.c(41,9): warning C4047: return: "char" отличается по уровням косвенного обращения от "char (*)[4]"
+C:\Users\Admin\Desktop\ЦПТ\Null and None\Null and None\Null and None.c(146,19): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "int"
 C:\Users\Admin\Desktop\ЦПТ\Null and None\Null and None\Null and None.c(43,1): warning C4715: igrok: значение возвращается не при всех путях выполнения
-  LINK : не найден или не выполнена сборка C:\Users\Admin\Desktop\ЦПТ\Null and None\x64\Debug\Null and None.exe при последней инкрементной компоновке; выполняется полная компоновка
   Null and None.vcxproj -> C:\Users\Admin\Desktop\ЦПТ\Null and None\x64\Debug\Null and None.exe
