@@ -1,7 +1,23 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <locale.h>
 #include <stdio.h>
+#include <stdlib.h>
 //#include <iostream>
+int hod(char mas[3][3], int vibor) {
+    while (1) {
+        printf("Выберите ячейку для установки:\n");
+        scanf("%d", &vibor);
+        vibor -= 1;
+        if (vibor > 9 || vibor < 1) {
+            printf("Некорректный номер ячейки, повторите попытку!\n");
+        }
+        if (mas[vibor / 3][vibor % 3] != NULL) {
+            printf("Ячейка занята, выберите другую!\n");
+            }
+        mas[vibor / 3][vibor % 3] = 'x';
+        break;
+    }
+}
 
 int main()
 {
