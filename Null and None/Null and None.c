@@ -6,10 +6,10 @@ char bot(char mas[3][4], int vybor) {
         int vibor = rand() % 8;
         if (mas[vibor / 3][vibor % 3] == '-') {
             if (vybor == 1) {
-                mas[vibor / 3][vibor % 3] = 'X';
+                mas[vibor / 3][vibor % 3] = 'O';
             }
             else {
-                mas[vibor / 3][vibor % 3] = 'O';
+                mas[vibor / 3][vibor % 3] = 'X';
             }
             break;
         }
