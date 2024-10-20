@@ -26,7 +26,7 @@ char igrok(char mas[3][4], int vybor) {
     }
 }
 
-    int main()
+    void main()
     {
         int Choise = 0;
         setlocale(LC_ALL, "");
