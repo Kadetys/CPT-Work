@@ -3,20 +3,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 //#include <iostream>
-int hod(char mas[3][3], int vibor) {
+char igrok(char mas[3][4], int vybor) {
     while (1) {
+        int vibor;
         printf("Выберите ячейку для установки:\n");
         scanf("%d", &vibor);
-        vibor -= 1;
         if (vibor > 9 || vibor < 1) {
             printf("Некорректный номер ячейки, повторите попытку!\n");
         }
-        if (mas[vibor / 3][vibor % 3] != NULL) {
+        vibor -= 1;
+        if (mas[vibor / 3][vibor % 3] != '-') {
             printf("Ячейка занята, выберите другую!\n");
             }
-        mas[vibor / 3][vibor % 3] = 'x';
+        if (vybor == 1) {
+            mas[vibor / 3][vibor % 3] = 'X';
+        }
+        else {
+            mas[vibor / 3][vibor % 3] = 'O';
+        }
         break;
-    }
+        return mas;
 }
 
 int main()
