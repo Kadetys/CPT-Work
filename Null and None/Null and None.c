@@ -42,6 +42,46 @@ char igrok(char mas[3][4], int vybor) {
     }
 }
 
+int check(char mas[3][4]) {
+    int count = 0;
+    for (int i = 0; i != 3; i++) {
+        if (mas[i][0] == mas[i][1] == mas[i][2] == 'X') {
+            printf("Победил крестик!\n");
+            return 0;
+        }
+        if (mas[i][0] == mas[i][1] == mas[i][2] == 'O') {
+            printf("Победил нолик!\n");
+            return 0;
+        }
+    }
+        for (int i = 0; i != 3; i++) {
+            if (mas[0][i] == mas[1][i] == mas[2][i] == 'X') {
+                printf("Победил крестик!\n");
+                return 0;
+            }
+            if (mas[0][i] == mas[1][i] == mas[2][i] == 'O') {
+                printf("Победил нолик!\n");
+                return 0;
+            }
+    }
+        if (mas[0][0] == mas[1][1] == mas[2][2] == 'X') {
+            printf("Победил крестик!\n");
+            return 0;
+        }
+        if (mas[0][2] == mas[1][1] == mas[2][0] == 'X') {
+            printf("Победил крестик!\n");
+            return 0;
+        }
+        if (mas[0][0] == mas[1][1] == mas[2][2] == 'O') {
+            printf("Победил нолик!\n");
+            return 0;
+        }
+        if (mas[0][2] == mas[1][1] == mas[2][0] == 'O') {
+            printf("Победил нолик!\n");
+            return 0;
+        }
+        return 1;
+}
 
 void main()
 {
