@@ -30,6 +30,7 @@ char igrok(char mas[3][4], int vybor) {
         vibor -= 1;
         if (mas[vibor / 3][vibor % 3] != '-') {
             printf("Ячейка занята, выберите другую!\n");
+            continue;
         }
         if (vybor == 1) {
             mas[vibor / 3][vibor % 3] = 'X';
@@ -45,49 +46,49 @@ char igrok(char mas[3][4], int vybor) {
 int check(char mas[3][4], int none) {
     int count = 0;
     for (int i = 0; i != 3; i++) {
-        if (mas[i][0] == mas[i][1] == mas[i][2] == 'X') {
+        if (mas[i][0] == 'X'&& mas[i][1] == 'X'&& mas[i][2] == 'X') {
             printf("Победил крестик!\n");
             return 0;
         }
-        if (mas[i][0] == mas[i][1] == mas[i][2] == 'O') {
+        if (mas[i][0] == 'O' && mas[i][1] == 'O' && mas[i][2] == 'O') {
             printf("Победил нолик!\n");
             return 0;
         }
     }
-        for (int i = 0; i != 3; i++) {
-            if (mas[0][i] == mas[1][i] == mas[2][i] == 'X') {
+        for (int i = 0; i != 4; i++) {
+            if (mas[0][i] == 'X' && mas[1][i] == 'O' && mas[2][i] == 'X') {
                 printf("Победил крестик!\n");
                 return 0;
             }
-            if (mas[0][i] == mas[1][i] == mas[2][i] == 'O') {
+            if (mas[0][i] == 'O' && mas[1][i] == 'O' && mas[2][i] == 'O') {
                 printf("Победил нолик!\n");
                 return 0;
             }
     }
-        if (mas[0][0] == mas[1][1] == mas[2][2] == 'X') {
+        if (mas[0][0] == 'X' && mas[1][1] == 'X' && mas[2][2] == 'X') {
             printf("Победил крестик!\n");
             return 0;
         }
-        if (mas[0][2] == mas[1][1] == mas[2][0] == 'X') {
+        if (mas[0][2] == 'X' && mas[1][1] == 'X' && mas[2][0] == 'X') {
             printf("Победил крестик!\n");
             return 0;
         }
-        if (mas[0][0] == mas[1][1] == mas[2][2] == 'O') {
+        if (mas[0][0] == 'O' && mas[1][1] == 'O' && mas[2][2] == 'O') {
             printf("Победил нолик!\n");
             return 0;
         }
-        if (mas[0][2] == mas[1][1] == mas[2][0] == 'O') {
+        if (mas[0][2] == 'O' && mas[1][1] == 'O' && mas[2][0] == 'O') {
             printf("Победил нолик!\n");
             return 0;
         }
         for (int i = 0; i != 3; i++) {
             for (int j = 0; j != 4; j++) {
-                if (mas[i][j] != '-') {
-                    none += 1;
+                if (mas[i][j] == '-') {
+                    none -= 1;
                 }
             }
         }
-            if (none == 9) {
+            if (none == 0) {
                 printf("Ничья!\n");
                 return 0;
             }
@@ -121,29 +122,40 @@ void main()
                 mas[i][j] = '-';
             }
         }
-        while (1) {
             int game = 1;
-            while (game) {
+            while (1) {
                 if (Choise == 1) {
                     mas[3][4] = igrok(mas, Choise);
-                    game = check(mas, 0);
+                    game = check(mas, 9);
+                    if (game == 0) {
+                        break;
+                    }
                     pole(mas);
                     mas[3][4] = bot(mas, Choise);
-                    game = check(mas, 0);
+                    game = check(mas, 9);
+                    if (game == 0) {
+                        break;
+                    }
                     pole(mas);
                 }
                 else {
                     mas[3][4] = bot(mas, Choise);
-                    game = check(mas, 0);
+                    game = check(mas, 9);
+                    if (game == 0) {
+                        break;
+                    }
                     pole(mas);
                     mas[3][4] = igrok(mas, Choise);
-                    game = check(mas, 0);
+                    game = check(mas, 9);
+                    if (game == 0) {
+                        break;
+                    }
                     pole(mas);
                 }
             }
             int again = 0;
             printf("Сыграть ещё раз?\n 1. Да\n 2. Нет\n");
-            scanf("%d", again);
+            scanf("%d", &again);
             while (1) {
                 if (again > 2 || again < 1) {
                     printf("Выберите один из предложенных пунктов!\n");
@@ -155,6 +167,5 @@ void main()
             if (again == 2) {
                 break;
             }
-        }
     }
 }
