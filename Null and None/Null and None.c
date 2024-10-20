@@ -1,6 +1,24 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <locale.h>
 #include <stdio.h>
+char bot(char mas[3][4], int vybor) {
+    while (1) {
+        int vibor = rand() % 8;
+        if (mas[vibor / 3][vibor % 3] == '-') {
+            if (vybor == 1) {
+                mas[vibor / 3][vibor % 3] = 'X';
+            }
+            else {
+                mas[vibor / 3][vibor % 3] = 'O';
+            }
+            break;
+        }
+
+    }
+    return mas;
+}
+
+
 void main()
 {
     int Choise = 0;
