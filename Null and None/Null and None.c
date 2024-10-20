@@ -1,7 +1,31 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <locale.h>
 #include <stdio.h>
-void main()
+#include <stdlib.h>
+//#include <iostream>
+char igrok(char mas[3][4], int vybor) {
+    while (1) {
+        int vibor;
+        printf("Выберите ячейку для установки:\n");
+        scanf("%d", &vibor);
+        if (vibor > 9 || vibor < 1) {
+            printf("Некорректный номер ячейки, повторите попытку!\n");
+        }
+        vibor -= 1;
+        if (mas[vibor / 3][vibor % 3] != '-') {
+            printf("Ячейка занята, выберите другую!\n");
+            }
+        if (vybor == 1) {
+            mas[vibor / 3][vibor % 3] = 'X';
+        }
+        else {
+            mas[vibor / 3][vibor % 3] = 'O';
+        }
+        break;
+        return mas;
+}
+
+int main()
 {
     int Choise = 0;
     setlocale(LC_ALL, "");
