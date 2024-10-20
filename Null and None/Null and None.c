@@ -83,6 +83,10 @@ int check(char mas[3][4]) {
         return 1;
 }
 
+void pole(char mas[3][4]) {
+    printf("\n|-%c-|-%c-|-%c-| \n|-%c-|-%c-|-%c-| \n|-%c-|-%c-|-%c-| \n", mas[0][0], mas[0][1], mas[0][2], mas[1][0], mas[1][1], mas[1][2], mas[2][0], mas[2][1], mas[2][2]);
+}
+
 void main()
 {
     int Choise = 0;
